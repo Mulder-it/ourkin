@@ -1,0 +1,30 @@
+### Environnement - Never commit ###
+# = Passwords, API keys, DataBase connection info
+.env
+*.env
+
+
+### Python ###
+# = Useless to version, files -> bytecode
+__pycache__/
+*.pyc
+*.pyo
+# = Python virtual environnement -> pip install library. Lot of MO. Just need to version "requirements.txt"
+.venv/
+venv/
+# = generate when packaging a library to distribute to PyPI. Not use here. Default ignore
+*.egg-info/
+dist/
+
+### Pycharm ###
+# = IDE config -> Personal
+.idea/
+
+# Docker volumes
+# Protection if Docker use local file to stock DB -> Only structure should be versioning not data
+postgres_data
+
+# OS
+# = Mac(finder formatting) and Windows(icons) -> invisible specific config files useless to version
+.DS_Store
+Thumbs.db
